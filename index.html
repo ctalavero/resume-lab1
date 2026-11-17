@@ -160,27 +160,22 @@
         <h2 class="section-title" id="contact-title" tabindex="-1">Зв’язок</h2>
         <div class="row g-4 g-lg-5">
           <div class="col-12 col-lg-5">
-            <p class="section-lead">Напишіть мені в LinkedIn, якщо хочете обговорити роль у команді або задачу для бекенду.</p>
+            <p class="section-lead">Напишіть мені, якщо хочете обговорити роль у команді або задачу для бекенду.</p>
             <a class="btn btn-outline-dark" href="https://www.linkedin.com/in/ctalavero12/">
-              Відкрити LinkedIn <img src="assets/icons/arrow-up-right.svg" alt="" width="16" height="16">
+              Написати в LinkedIn <img src="assets/icons/arrow-up-right.svg" alt="" width="16" height="16">
             </a>
+            <p class="mt-3 mb-0"><a id="contact-email" href="mailto:ctalavero12@gmail.com">ctalavero12@gmail.com</a></p>
           </div>
           <div class="col-12 col-lg-7">
             <form class="contact-form needs-validation" id="contact-form" aria-describedby="form-note" method="post">
-              <h3>Чернетка повідомлення</h3>
-              <p id="form-note">Підготуйте текст тут і вставте його в повідомлення LinkedIn.</p>
+              <h3>Написати листа</h3>
+              <p id="form-note">Заповніть форму, щоб відкрити готовий лист у своєму поштовому застосунку.</p>
               <div class="row g-3">
-                <div class="col-12 col-md-6">
+                <div class="col-12">
                   <label class="form-label" for="name">Ім’я</label>
                   <input class="form-control" id="name" name="name" autocomplete="name" maxlength="80"
                     required aria-describedby="name-error">
                   <div class="invalid-feedback" id="name-error">Вкажіть своє ім’я.</div>
-                </div>
-                <div class="col-12 col-md-6">
-                  <label class="form-label" for="email">Електронна пошта</label>
-                  <input class="form-control" id="email" name="email" type="email" autocomplete="email" maxlength="254"
-                    required aria-describedby="email-error">
-                  <div class="invalid-feedback" id="email-error">Введіть коректну електронну адресу.</div>
                 </div>
                 <div class="col-12">
                   <label class="form-label" for="message">Повідомлення</label>
@@ -189,16 +184,19 @@
                   <div class="invalid-feedback" id="message-error">Додайте текст повідомлення.</div>
                 </div>
                 <div class="col-12">
-                  <button class="btn btn-primary" type="submit" id="prepare-draft" disabled>Підготувати чернетку</button>
-                  <noscript><p>Для підготовки чернетки увімкніть JavaScript або відкрийте LinkedIn.</p></noscript>
+                  <button class="btn btn-primary" type="submit" id="prepare-draft" disabled>Відкрити лист</button>
+                  <noscript><p>Для підготовки листа увімкніть JavaScript або скористайтеся посиланням на пошту.</p></noscript>
                 </div>
               </div>
             </form>
             <div class="alert alert-success draft-result mt-3 mb-0" id="draft-result" hidden>
-              <p class="fw-semibold mb-2" id="draft-status" role="status">Чернетка готова до копіювання.</p>
-              <label class="form-label" for="draft">Текст для LinkedIn</label>
+              <p class="fw-semibold mb-2" id="draft-status" role="status">Якщо пошта не відкрилася, скопіюйте текст листа.</p>
+              <label class="form-label" for="draft">Текст листа</label>
               <textarea class="form-control" id="draft" rows="5" readonly></textarea>
-              <button class="btn btn-outline-dark mt-3" type="button" id="copy-draft">Скопіювати текст</button>
+              <div class="d-flex flex-wrap gap-2 mt-3">
+                <button class="btn btn-outline-dark" type="button" id="copy-draft">Скопіювати текст</button>
+                <a class="btn btn-outline-dark" id="open-draft">Відкрити лист ще раз</a>
+              </div>
             </div>
           </div>
         </div>

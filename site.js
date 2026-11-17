@@ -1,7 +1,9 @@
 const menu = document.querySelector('#site-menu');
 const menuButton = document.querySelector('[aria-controls="site-menu"]');
 const form = document.querySelector('#contact-form');
+const email = document.querySelector('#contact-email');
 const draft = document.querySelector('#draft');
+const openDraft = document.querySelector('#open-draft');
 const draftStatus = document.querySelector('#draft-status');
 const result = document.querySelector('#draft-result');
 const fields = form.querySelectorAll('input, textarea');
@@ -39,9 +41,9 @@ function updateField(field) {
   const valid = field.validity.valid && field.value.trim().length > 0;
   field.classList.toggle('is-invalid', !valid);
   field.setAttribute('aria-invalid', String(!valid));
-  return valid;
 }
 
+const draftTip = draftStatus.textContent;
 document.querySelector('#prepare-draft').disabled = false;
 form.noValidate = true;
 form.addEventListener('submit', event => {
@@ -55,22 +57,26 @@ form.addEventListener('submit', event => {
   }
 
   const values = new FormData(form);
-  draft.value = `${values.get('message').trim()}\n\n${values.get('name').trim()}\n${values.get('email').trim()}`;
-  draftStatus.textContent = 'Чернетка готова до копіювання.';
+  draft.value = `${values.get('message').trim()}\n\n${values.get('name').trim()}`;
+  const subject = encodeURIComponent('Повідомлення з сайту-візитки');
+  const body = encodeURIComponent(draft.value.replace(/\n/g, '\r\n'));
+  openDraft.href = `${email.href}?subject=${subject}&body=${body}`;
+  draftStatus.textContent = draftTip;
   result.hidden = false;
-  draft.focus();
+  openDraft.click();
 });
 
 form.addEventListener('input', event => {
   if (event.target.classList.contains('is-invalid')) updateField(event.target);
   result.hidden = true;
   draft.value = '';
+  openDraft.removeAttribute('href');
 });
 
 document.querySelector('#copy-draft').addEventListener('click', async () => {
   try {
     await navigator.clipboard.writeText(draft.value);
-    draftStatus.textContent = 'Чернетка готова до копіювання.';
+    draftStatus.textContent = draftTip;
     if (window.bootstrap) {
       bootstrap.Toast.getOrCreateInstance(document.querySelector('#copy-toast')).show();
     } else {
