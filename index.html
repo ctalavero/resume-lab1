@@ -188,16 +188,20 @@
                   <noscript><p>Для підготовки листа увімкніть JavaScript або скористайтеся посиланням на пошту.</p></noscript>
                 </div>
               </div>
-            </form>
-            <div class="alert alert-success draft-result mt-3 mb-0" id="draft-result" hidden>
-              <p class="fw-semibold mb-2" id="draft-status" role="status">Якщо пошта не відкрилася, скопіюйте текст листа.</p>
-              <label class="form-label" for="draft">Текст листа</label>
-              <textarea class="form-control" id="draft" rows="5" readonly></textarea>
-              <div class="d-flex flex-wrap gap-2 mt-3">
-                <button class="btn btn-outline-dark" type="button" id="copy-draft">Скопіювати текст</button>
-                <a class="btn btn-outline-dark" id="open-draft">Відкрити лист ще раз</a>
+              <div class="alert draft-result mt-4 mb-0 px-0 pt-3 pb-0" id="draft-result" hidden>
+                <h4 class="mb-1">Лист підготовлено</h4>
+                <p class="mb-3" id="draft-status" role="status">Якщо пошта не відкрилася, скопіюйте текст.</p>
+                <div class="d-flex flex-wrap align-items-center gap-2">
+                  <button class="btn btn-outline-dark" type="button" id="copy-draft">Скопіювати текст</button>
+                  <a class="draft-retry" id="open-draft">Відкрити знову</a>
+                </div>
+                <details class="draft-preview mt-1" id="draft-preview">
+                  <summary>Переглянути текст</summary>
+                  <label class="visually-hidden" for="draft">Текст листа</label>
+                  <textarea class="form-control" id="draft" rows="4" readonly></textarea>
+                </details>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>

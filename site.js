@@ -3,10 +3,11 @@ const menuButton = document.querySelector('[aria-controls="site-menu"]');
 const form = document.querySelector('#contact-form');
 const email = document.querySelector('#contact-email');
 const draft = document.querySelector('#draft');
+const draftPreview = document.querySelector('#draft-preview');
 const openDraft = document.querySelector('#open-draft');
 const draftStatus = document.querySelector('#draft-status');
 const result = document.querySelector('#draft-result');
-const fields = form.querySelectorAll('input, textarea');
+const fields = form.querySelectorAll('[required]');
 const tour = document.querySelector('#nest-tour');
 const slides = tour.querySelectorAll('.carousel-item');
 const previousSlide = tour.querySelector('[data-bs-slide="prev"]');
@@ -63,6 +64,7 @@ form.addEventListener('submit', event => {
   openDraft.href = `${email.href}?subject=${subject}&body=${body}`;
   draftStatus.textContent = draftTip;
   result.hidden = false;
+  result.scrollIntoView({ block: 'nearest' });
   openDraft.click();
 });
 
@@ -70,6 +72,7 @@ form.addEventListener('input', event => {
   if (event.target.classList.contains('is-invalid')) updateField(event.target);
   result.hidden = true;
   draft.value = '';
+  draftPreview.open = false;
   openDraft.removeAttribute('href');
 });
 
@@ -83,6 +86,7 @@ document.querySelector('#copy-draft').addEventListener('click', async () => {
       draftStatus.textContent = 'Текст скопійовано.';
     }
   } catch {
+    draftPreview.open = true;
     draft.focus();
     draft.select();
     draftStatus.textContent = 'Текст виділено. Скопіюйте його вручну.';
