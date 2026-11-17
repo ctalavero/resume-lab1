@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="uk" data-type="service" data-radius="soft" data-buttons="solid" data-motion>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Микола Филипчук, Python backend-інженер. Досвід роботи з API, хмарними сервісами та розподіленими системами.">
+  <meta name="page-type" content="service">
+  <meta name="site-kind" content="other">
+  <meta name="theme-color" content="#f3f0e9">
+  <meta property="og:title" content="Микола Филипчук — Backend Engineer">
+  <meta property="og:description" content="Python, API і хмарні сервіси. Вибрані роботи Миколи Филипчука.">
+  <meta property="og:type" content="website">
+  <title>Микола Филипчук — Backend Engineer</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/motion/motion.css">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('m-enter'); setTimeout(() => document.documentElement.classList.add('m-enter-done'), 700);</script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">До основного вмісту</a>
+  <header class="site-header nav">
+    <nav class="navbar navbar-expand-lg" aria-label="Головна навігація">
+      <div class="container wrap">
+        <a class="navbar-brand" href="#top" aria-label="Микола Филипчук, на початок">MF<span>.</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#site-menu"
+          aria-controls="site-menu" aria-expanded="false">
+          Меню <img src="assets/icons/list.svg" alt="" width="20" height="20">
+        </button>
+        <div class="offcanvas offcanvas-end" id="site-menu" tabindex="-1" aria-labelledby="menu-title">
+          <div class="offcanvas-header">
+            <h2 class="offcanvas-title" id="menu-title">Меню</h2>
+            <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Закрити меню"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav ms-lg-auto gap-lg-4">
+              <li class="nav-item"><a class="nav-link" href="#work">Роботи</a></li>
+              <li class="nav-item"><a class="nav-link" href="#approach">Підхід</a></li>
+              <li class="nav-item"><a class="nav-link nav-contact" href="#contact">Контакт</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero hero--split section" data-enter aria-labelledby="hero-title">
+      <div class="container wrap">
+        <div class="row hero-grid align-items-center gy-4">
+          <div class="col-12 col-lg-6 hero-copy">
+            <h1 id="hero-title">Микола<br>
+              Филипчук</h1>
+            <p class="hero-role">Python backend-інженер</p>
+            <p class="hero-lead hero__lead">Розробляю API та хмарні сервіси. Працював над платформою медичних сервісів і бекендом для Smart TV.</p>
+            <a class="btn btn-primary hero-action" href="#work">Переглянути роботи
+              <img src="assets/icons/arrow-down.svg" alt="" width="18" height="18">
+            </a>
+          </div>
+          <div class="col-12 col-lg-6 hero-art" data-enter-media>
+            <div class="trace hero__media" data-visual role="img" aria-label="Шлях запиту GET /courses. FastAPI приймає запит, PostgreSQL повертає дані, клієнт отримує відповідь JSON зі статусом 200 OK.">
+              <div class="trace-header">
+                <span>Шлях запиту</span>
+                <code>GET /courses</code>
+              </div>
+              <ol class="trace-path mb-0" aria-label="Приклад проходження HTTP-запиту">
+                <li><div><b>FastAPI</b><span>Приймає запит</span></div></li>
+                <li><div><b>PostgreSQL</b><span>Повертає дані</span></div></li>
+                <li><div><b>JSON</b><span>Відповідь клієнту</span></div></li>
+              </ol>
+              <div class="trace-footer"><code><span aria-hidden="true"></span>200 OK</code><span>Приклад API</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section work" id="work" aria-labelledby="work-title">
+      <div class="container wrap">
+        <h2 class="section-title" id="work-title" tabindex="-1">Вибрані роботи</h2>
+        <p class="section-lead">Два проєкти з роботи в EPAM і дипломна платформа для вивчення Python.</p>
+        <div class="row g-3 g-lg-4 work-grid">
+          <div class="col-12 col-md-6 col-xl-4">
+            <article class="card case-card h-100">
+              <div class="case-art case-health"><span>Медичні сервіси</span><strong>API<span>.</span></strong></div>
+              <div class="card-body d-flex flex-column">
+                <p class="case-date">EPAM · 2026</p>
+                <h3 class="card-title">Платформа для медтеху</h3>
+                <p class="card-text">Розробляв REST і GraphQL API, налаштовував обмін подіями через Azure Service Bus і трасування запитів.</p>
+                <ul class="case-stack list-unstyled d-flex flex-wrap gap-2 mt-auto mb-0" aria-label="Технології">
+                  <li><span class="badge">FastAPI</span></li><li><span class="badge">Azure</span></li><li><span class="badge">OpenTelemetry</span></li>
+                </ul>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-xl-4">
+            <article class="card case-card h-100">
+              <div class="case-art case-tv"><span>Smart TV</span><strong>TV<span>.</span></strong></div>
+              <div class="card-body d-flex flex-column">
+                <p class="case-date">EPAM · 2025</p>
+                <h3 class="card-title">Хмарна платформа для TV</h3>
+                <p class="card-text">Доопрацьовував ядро на Django і створював сервіси на AWS Lambda для платформи взаємодії пацієнтів із лікарнею.</p>
+                <ul class="case-stack list-unstyled d-flex flex-wrap gap-2 mt-auto mb-0" aria-label="Технології">
+                  <li><span class="badge">Django</span></li><li><span class="badge">AWS Lambda</span></li><li><span class="badge">DynamoDB</span></li>
+                </ul>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-xl-4">
+            <article class="card case-card h-100">
+              <div class="case-art case-nest"><span>Навчальна платформа</span><strong>Py<span>.</span></strong></div>
+              <div class="card-body d-flex flex-column">
+                <p class="case-date">Дипломний проєкт · 2024</p>
+                <h3 class="card-title">PythonNest</h3>
+                <p class="card-text">Розробив бекенд для курсів і статей із ролями користувачів, відгуками та оцінюванням.</p>
+                <button class="btn btn-outline-dark align-self-start mt-auto" type="button"
+                  data-bs-toggle="modal" data-bs-target="#python-nest">
+                  Переглянути PythonNest <img src="assets/icons/arrow-up-right.svg" alt="" width="16" height="16">
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section approach" id="approach" data-moment="word-highlight" aria-labelledby="approach-title">
+      <div class="container wrap">
+        <h2 class="section-title" id="approach-title" tabindex="-1">Мій підхід</h2>
+        <p class="mo-wh__text">Веду задачі від API-контракту до продакшену, де важливо бачити, <strong>як запит проходить між сервісами.</strong></p>
+        <div class="accordion accordion-flush" id="engineering">
+          <div class="accordion-item">
+            <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse"
+              data-bs-target="#api-detail" aria-expanded="true" aria-controls="api-detail">API і дані</button></h3>
+            <div class="accordion-collapse collapse show" id="api-detail" data-bs-parent="#engineering">
+              <p class="accordion-body mb-0">Описую контракти REST і GraphQL, перевіряю вхідні дані через Pydantic і працюю зі схемами PostgreSQL.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#events-detail" aria-expanded="false" aria-controls="events-detail">Події та черги</button></h3>
+            <div class="accordion-collapse collapse" id="events-detail" data-bs-parent="#engineering">
+              <p class="accordion-body mb-0">Використовую Azure Service Bus, AWS SQS або Celery з RabbitMQ для задач, які можна виконати поза HTTP-запитом.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#trace-detail" aria-expanded="false" aria-controls="trace-detail">Спостережуваність</button></h3>
+            <div class="accordion-collapse collapse" id="trace-detail" data-bs-parent="#engineering">
+              <p class="accordion-body mb-0">Трасую шлях запиту через OpenTelemetry. Для відстеження помилок у продакшені працював із Sentry.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container wrap">
+        <h2 class="section-title" id="contact-title" tabindex="-1">Зв’язок</h2>
+        <div class="row g-4 g-lg-5">
+          <div class="col-12 col-lg-5">
+            <p class="section-lead">Напишіть мені в LinkedIn, якщо хочете обговорити роль у команді або задачу для бекенду.</p>
+            <a class="btn btn-outline-dark" href="https://www.linkedin.com/in/ctalavero12/">
+              Відкрити LinkedIn <img src="assets/icons/arrow-up-right.svg" alt="" width="16" height="16">
+            </a>
+          </div>
+          <div class="col-12 col-lg-7">
+            <form class="contact-form needs-validation" id="contact-form" aria-describedby="form-note" method="post">
+              <h3>Чернетка повідомлення</h3>
+              <p id="form-note">Підготуйте текст тут і вставте його в повідомлення LinkedIn.</p>
+              <div class="row g-3">
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="name">Ім’я</label>
+                  <input class="form-control" id="name" name="name" autocomplete="name" maxlength="80"
+                    required aria-describedby="name-error">
+                  <div class="invalid-feedback" id="name-error">Вкажіть своє ім’я.</div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="email">Електронна пошта</label>
+                  <input class="form-control" id="email" name="email" type="email" autocomplete="email" maxlength="254"
+                    required aria-describedby="email-error">
+                  <div class="invalid-feedback" id="email-error">Введіть коректну електронну адресу.</div>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="message">Повідомлення</label>
+                  <textarea class="form-control" id="message" name="message" rows="4" maxlength="1500" required
+                    aria-describedby="message-error"></textarea>
+                  <div class="invalid-feedback" id="message-error">Додайте текст повідомлення.</div>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit" id="prepare-draft" disabled>Підготувати чернетку</button>
+                  <noscript><p>Для підготовки чернетки увімкніть JavaScript або відкрийте LinkedIn.</p></noscript>
+                </div>
+              </div>
+            </form>
+            <div class="alert alert-success draft-result mt-3 mb-0" id="draft-result" hidden>
+              <p class="fw-semibold mb-2" id="draft-status" role="status">Чернетка готова до копіювання.</p>
+              <label class="form-label" for="draft">Текст для LinkedIn</label>
+              <textarea class="form-control" id="draft" rows="5" readonly></textarea>
+              <button class="btn btn-outline-dark mt-3" type="button" id="copy-draft">Скопіювати текст</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container wrap d-flex flex-wrap justify-content-between align-items-center gap-2">
+      <span>Микола Филипчук</span>
+      <a href="#top">До початку</a>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="python-nest" tabindex="-1" aria-labelledby="nest-title" aria-describedby="nest-lead">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="nest-title">PythonNest</h2>
+          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Закрити опис"></button>
+        </div>
+        <div class="modal-body">
+          <p id="nest-lead">Три частини дипломної платформи для вивчення Python.</p>
+          <div class="carousel slide" id="nest-tour" data-bs-interval="false" data-bs-wrap="false"
+            role="region" aria-roledescription="карусель" aria-label="Можливості PythonNest">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <h3>Курси й статті</h3>
+                <p>Автори створюють і редагують матеріали для вивчення Python.</p>
+              </div>
+              <div class="carousel-item">
+                <h3>Облікові записи</h3>
+                <p>Автентифікація та права доступу розмежовують дії авторів і читачів.</p>
+              </div>
+              <div class="carousel-item">
+                <h3>Зворотний зв’язок</h3>
+                <p>Читачі можуть оцінити матеріал і залишити відгук.</p>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center gap-2 my-3 tour-controls">
+              <button class="btn btn-outline-dark" type="button" data-bs-target="#nest-tour" data-bs-slide="prev" disabled>Назад</button>
+              <span class="tour-index" id="tour-count" aria-live="polite">1 з 3</span>
+              <button class="btn btn-outline-dark" type="button" data-bs-target="#nest-tour" data-bs-slide="next">Далі</button>
+            </div>
+            <div class="progress" id="tour-progress" role="progressbar" aria-label="Перегляд PythonNest"
+              aria-valuemin="0" aria-valuemax="3" aria-valuenow="1">
+              <div class="progress-bar" style="width: 33.333%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div class="toast" id="copy-toast" role="status" aria-live="polite" aria-atomic="true">
+      <div class="d-flex align-items-center">
+        <div class="toast-body">Текст скопійовано.</div>
+        <button type="button" class="btn-close ms-auto me-3" data-bs-dismiss="toast" aria-label="Закрити сповіщення"></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="assets/motion/motion.js" type="module"></script>
+  <script src="assets/moments/moments.js" type="module"></script>
+  <script src="site.js" defer></script>
+</body>
+</html>
